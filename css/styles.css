@@ -229,4 +229,28 @@ img {
   .container {
     max-width: 33.2rem;
   }
+
+  .result_search .status .view {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .result_search .status .temp {
+    width: 100%;
+  }
+
+  .location {
+    flex-flow: row wrap;
+  }
+
+  .location .name {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .location .description {
+    width: 100%;
+    text-align: center;
+    margin-left: 3.2rem;
+  }
 }
