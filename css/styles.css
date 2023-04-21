@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  font-size: 1.6rem;
+  font-family: "Inter", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  font-size: 62.5%;
+  background: hsl(0, 0%, 20%);
+}
+
+a,
+button {
+  cursor: pointer;
+  background: transparent;
+}
+
+img {
+  display: inline-block;
+  width: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 121.6rem;
+}
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: radial-gradient(
+    393.63% 107.9% at 100.33% 0%,
+    #f0cb58 0%,
+    #ff414c 49.5%,
+    #0f0f1a 100%
+  );
+}
+
+.hero .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.box_weather {
+  background: hsl(240, 38%, 6%, 0.64);
+  -webkit-backdrop-filter: blur(0.8rem);
+  backdrop-filter: blur(0.8rem);
+  padding: 3.2rem;
+  width: 100%;
+  max-width: 48rem;
+  height: fit-content;
+  border-radius: 0.8rem;
+  color: hsl(0, 0%, 98%);
+  display: flex;
+  flex-flow: row wrap;
+  gap: 3.2rem;
+}
+
+.form_weather {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.form_weather .input_search {
+  width: 100%;
+  max-width: 36.4rem;
+  height: 4.8rem;
+  background: transparent;
+  font-size: 1.8rem;
+  color: hsl(235, 74%, 83%);
+  border: 0.1rem solid hsl(235, 74%, 83%);
+  padding: 1.2rem 1.6rem;
+  border-radius: 0.8rem 0rem 0rem 0.8rem;
+  transition: all 0.3s ease-in-out;
+  text-transform: capitalize;
+}
+
+.form_weather .input_search:is(:focus, :hover) {
+  color: #fbfbfb;
+  border: 0.1rem solid hsl(236, 55%, 89%);
+  background: hsla(235, 19%, 34%, 0.16);
+}
+
+.form_weather .btn_search {
+  font-size: 1.8rem;
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 0rem 0.8rem 0.8rem 0rem;
+  background: hsl(42, 75%, 68%);
+  transition: all 0.3s ease-in;
+  color: hsl(240, 38%, 6%);
+}
+
+.form_weather .btn_search:is(:focus, :hover) {
+  color: #fbfbfb;
+  background: hsl(357, 100%, 63%);
+}
+
+.result_empty {
+  max-width: 30rem;
+  margin: 0 auto;
+}
+
+.result_error {
+  display: none;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.result_error .search_error {
+  color: hsl(357, 100%, 63%);
+  font-size: 2.4rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.result_error img {
+  max-width: 13.2rem;
+  margin: 0 auto;
+}
+
+.result_search {
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.result_search .location {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.location .name {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.location .description {
+  color: cadetblue;
+  text-transform: capitalize;
+}
+
+.result_search .location .city,
+.result_search .location .ph {
+  font-size: 3.2rem;
+}
+
+.result_search .status {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+}
+
+.result_search .status .view {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  width: fit-content;
+}
+
+.status .view .icon {
+  width: 11.6rem;
+  height: 11.6rem;
+}
+
+.result_search .status .temp {
+  width: fit-content;
+  padding: 0.8rem 1.6rem;
+  background: #fbfbfb05;
+}
+
+.status .view .def {
+  font-size: 4rem;
+  font-weight: 400;
+}
+
+.temp .max,
+.temp .min {
+  margin-top: 0.8rem;
+  text-align: center;
+}
+
+.temp .max {
+  color: aqua;
+}
+
+.temp .min {
+  color: coral;
+}
+
+@media (max-width: 960px) {
+  .container {
+    max-width: 63rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    max-width: 33.2rem;
+  }
+}

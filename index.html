@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="favicon.png" />
+
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <script src="./js/main.js" defer></script>
+    <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
+
+    <title>Weather</title>
+  </head>
+  <body>
+    <section class="hero">
+      <div class="container">
+        <div class="box_weather">
+          <div class="form_weather">
+            <input
+              type="text"
+              name="city"
+              placeholder="Sua cidade"
+              class="input_search"
+              autocomplete="off"
+            />
+
+            <button onclick="formValues()" class="btn_search">
+              <i class="ph ph-magnifying-glass"></i>
+            </button>
+          </div>
+
+          <img
+            src="./assets/empty.svg"
+            alt="Imagem quando ainda não tem pesquisa"
+            class="result_empty"
+          />
+
+          <div class="result_error">
+            <img
+              src="./assets/city_not_faund.svg"
+              alt="Cidade não encontrada"
+            />
+            <p class="search_error">Cidade não encontrada</p>
+          </div>
+
+          <div class="result_search">
+            <div class="location">
+              <div class="name">
+                <i class="ph ph-map-pin"></i>
+                <h2 class="city"></h2>
+              </div>
+              <p class="description"></p>
+            </div>
+
+            <div class="status">
+              <div class="view">
+                <img
+                  src="/"
+                  alt="Icone da previsão"
+                  class="icon"
+                  loading="lazy"
+                />
+                <h5 class="def"></h5>
+              </div>
+
+              <div class="temp">
+                <h5 class="max"></h5>
+                <h5 class="min"></h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
